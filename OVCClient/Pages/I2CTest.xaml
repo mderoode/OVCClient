@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="OVCClient.Pages.I2CTest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OVCClient.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <StackPanel  Margin="10,10,0,0" Orientation="Horizontal">
+                <Button x:Name="button_on" Content="High" />
+                <Button x:Name="button_off" Content="Low"  Margin="10,0,0,0" />
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" Margin="10,10,10,0" >
+                <ProgressBar x:Name="meter_status" Height="25" Margin="0,0,0,0" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="text_message" Width="400" Height="20" />
+                    <Button x:Name="button_send" Content="Send message" Margin="10,0,0,0" Click="button_send_Click" />
+                    <TextBlock Text="Update: " Margin="50,5,0,0" FontSize="32"/>
+                    <Ellipse x:Name="layout_update" Fill="LightGray" Stroke="White" Width="40" Height="40" Margin="10"/>
+                </StackPanel>
+                <TextBlock x:Name="text_output" Margin="0,20,0,0" Height="600" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+         ScrollViewer.VerticalScrollBarVisibility="Auto" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
